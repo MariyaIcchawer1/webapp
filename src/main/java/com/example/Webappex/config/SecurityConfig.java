@@ -57,12 +57,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-
-//    @Bean
-//    public PasswordEncoder passwordEncoder(){
-//        return NoOpPasswordEncoder.getInstance();
-//    }
-
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {

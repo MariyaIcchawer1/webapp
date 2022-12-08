@@ -1,6 +1,6 @@
 package com.example.Webappex.payload;
 
-import lombok.Data;
+
 
 
 public class JwtAuthRequest {

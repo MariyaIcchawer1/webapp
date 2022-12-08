@@ -16,23 +16,10 @@ public class CustomerUserDetailsService implements UserDetailsService {
 
     @Override
     public  UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        List<SimpleGrantedAuthority> roles = null;
+
 
         return new User("user","xyz",new ArrayList<>());
 
-
-
-       /* if(username.equals("admin"))
-        {
-            roles=Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
-            return new User("admin","xyz",roles);
-        }
-        if(username.equals("user"))
-        {
-            roles=Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
-            return new User("user","xyz",roles);
-        }
-        throw new UsernameNotFoundException("User not found with the name "+ username);*/
     }
 
 }

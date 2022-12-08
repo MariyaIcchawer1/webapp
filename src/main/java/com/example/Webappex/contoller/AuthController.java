@@ -31,38 +31,6 @@ public class AuthController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-   /* @PostMapping("/login")
-    public ResponseEntity<JwtAuthresponse> createToken(@RequestBody JwtAuthRequest request) throws Exception {
-        this.authenticate(request.getUsername(),request.getPassword());
-        UserDetails userDetails= this.userDetailsService.loadUserByUsername(request.getUsername());
-        String token=this.jwtTokenHelper.generateToken(userDetails);
-        JwtAuthresponse response= new JwtAuthresponse();
-        response.setToken(token);
-        return new ResponseEntity<JwtAuthresponse>(response, HttpStatus.OK);
-    }
-    */
-
-
-
-   /* private void authenticate(String username, String password) throws Exception {
-
-        UsernamePasswordAuthenticationToken authenticationToken=new UsernamePasswordAuthenticationToken(username,password);
-           try{
-               this.authenticationManager.authenticate(authenticationToken);
-           }
-           catch(BadCredentialsException e){
-               System.out.println("Invalid details");
-               throw new Exception("Invalid username or passwrd");
-
-        }
-
-
-
-
-*/
-
-
-
 
     @PostMapping("/authenticate")
     public JwtAuthresponse authenticate(@RequestBody JwtAuthRequest userRequest) throws Exception{
